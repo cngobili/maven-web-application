@@ -32,7 +32,7 @@ node{
   }
   */stage('9.notification'){
       sh "echo create email notification to resolve any issue that may arise"
-      //use pipeline syntax and email notification plugin
+      //use pipeline syntax and email notification plugins
     emailext body: 'check the following:', recipientProviders: [developers()], subject: 'Job Status', to: 'kobingobili@gmail.com'
   }
 }
